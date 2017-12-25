@@ -24,21 +24,21 @@ class SearchBar extends Component {
   render() {
     return (
       <form onSubmit={this.onSubmitHandler}>
-      <div className="row">
-        <div className="col-md-8">
-        <input 
-          value={this.state.term}
-          onChange={this.onInputChange}
-          autoFocus
-          className="form-control form-control-md" 
-          type="text"
-          placeholder="Enter a city name to get the weather forecast"
-        />
+        <div className="row">
+          <div className="col-md-8">
+            <input
+              value={this.state.term}
+              onChange={this.onInputChange}
+              autoFocus
+              className="form-control form-control-md" 
+              type="text"
+              placeholder="Enter a city name to get the weather forecast"
+            />
+          </div>
+            <div className="col-md-4">
+              <button type="submit" className="btn btn-primary">Submit</button>
+            </div>
         </div>
-        <div className="col-md-4">
-        <button type="submit" className="btn btn-primary">Submit</button>
-        </div>
-      </div>
       </form>
     );
   }

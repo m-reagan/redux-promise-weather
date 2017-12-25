@@ -9,16 +9,12 @@ const renderCityRow = (cityData) => {
   const pressures = cityData.list.map(weather => weather.main.pressure);
   const humidities = cityData.list.map(weather => weather.main.humidity);
 
-  const tempsAvg = _.round(_.sum(temps)/temps.length);
-  const pressureAvg = _.round(_.sum(pressures)/pressures.length);
-  const humidityAvg = _.round(_.sum(humidities)/humidities.length);
-
   return (
     <tr key={cityData.city.name}>
       <td><GoogleMap lat={cityData.city.coord.lat} lon={cityData.city.coord.lon}/></td>
-      <td><div><Chart data={temps} color="green" /> {tempsAvg} (K) </div></td>
-      <td><div><Chart data={pressures} color="red" /> {pressureAvg} (hPa) </div></td>
-      <td><div><Chart data={humidities} color="black" /> {humidityAvg} (%) </div></td>
+      <td><Chart data={temps} color="green" units="k" /></td>
+      <td><Chart data={pressures} color="red" units="hPa" /></td>
+      <td><Chart data={humidities} color="black" units="%" /></td>
     </tr>
   );
 }

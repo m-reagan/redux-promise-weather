@@ -1,0 +1,19 @@
+form {
+  padding: 10px 0px
+}
+
+td, th {
+  vertical-align: middle;
+  text-align: left;
+  padding: 2px 0px;
+}
+
+svg {
+  width: 200px;
+  height: 150px;
+}
+
+td:first-of-type, td:first-of-type > div {
+  height: 200px;
+  width:200px;
+}
